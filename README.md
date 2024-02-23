@@ -1,4 +1,4 @@
-# Mechatronics Course - EPP333,
+# Mechatronics Course - EPP333
 ### Alexandria University,  Prof. Mohammed El Habrouk
 
 ## Labs and Tasks Overview
