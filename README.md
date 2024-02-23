@@ -1,7 +1,7 @@
-# Mechatronics Course - EPP333
-### Alexandria University,  Prof. Mohammed El Habrouk
+## Mechatronics Course - EPP333
+#### Alexandria University,  Prof. Mohammed El Habrouk
 
-## Labs and Tasks Overview
+### Labs and Tasks Overview
 
 1. **Lab 1:** ROS Introduction
 2. **Lab 2:** Kinematics Fundamentals
