@@ -1,51 +1,43 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 import rospy
-from std_msgs.msg import String
 import random
+import math as m
+from std_msgs.msg import Int16, Float32
+import time
 
-num = 0
-flag = False
-firstData = True
-pervious = 0
-recevied = 0
+n = 0  
+encrypted_num = 0 
 
-def Callback(data):
-    global flag ,recevied
-    recevied = int(data.data)
-    rospy.loginfo(". state of data : %s", flag)
-    
-def Publisher():
-    global num ,recevied , firstData , pervious
-    
-    rospy.init_node(name='Synchronous_Publisher' , anonymous= True)
-    pub = rospy.Publisher('encrypted_data',String,queue_size=10)
+def my_callback(data):
+    global encrypted_num
+    global n
+    data_back = data.data
+    rospy.loginfo("I received %i", data_back)
+    if data_back == encrypted_num:
+        rospy.loginfo("Received data == encrypted data")
+        n = 1
+    else:
+        rospy.logwarn("Data received is incorrect")
+        n = 0
 
-    rate = rospy.Rate(2)
-
-    while not rospy.is_shutdown():
-        sub = rospy.Subscriber('decrypted_data', String, Callback)
-        
-        num = random.randint(1,100)
-        encrypted_num = num ** 2 + 10
-        
-        e_str = ". data = " + str(num) + "  . encrypted_data = " + str(encrypted_num)
-        rospy.loginfo("Waiting ...")  
-        if recevied == pervious :
-            rospy.loginfo("Data is synch")  
-            rospy.loginfo(e_str)
-            pub.publish(str(encrypted_num))
-        
-        # Wait for subscriber's response
-              
-        rate.sleep()
-
-        
 if __name__ == '__main__':
-    try:
-        Publisher()
-        
-    except rospy.ROSInterruptException:
-        pass
+    rospy.init_node('Synchronous_Publisher', anonymous=True)
+    pub = rospy.Publisher('encrypted_data', Int16, queue_size=10)
+    sub = rospy.Subscriber("dycrypted_data", Float32, my_callback)
+    rate = rospy.Rate(0.5)
     
-    
+    while not rospy.is_shutdown():
+        if n == 1:
+            n = 0
+            j = random.randint(1, 10)
+            encrypted_num = (j ** 2 + 10)
+            rospy.loginfo(encrypted_num)
+            pub.publish(encrypted_num)
+            time.sleep(3)
+        elif n == 0:
+            rospy.loginfo("No message received. Please send it again.")
+            j = random.randint(1, 30)
+            encrypted_num = (j ** 2 + 10)
+            pub.publish(encrypted_num)
+            rate.sleep()
