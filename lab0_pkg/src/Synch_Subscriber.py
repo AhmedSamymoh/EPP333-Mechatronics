@@ -1,31 +1,24 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
+import rospy 
+import math as m
+from std_msgs.msg import Int16 ,Float32
+import time
 
-import rospy
-from std_msgs.msg import String
-import math
+i = 0
+
+def my_callback (data):
     
+    rospy.loginfo(". Encrypted num %i",data.data) 
+    global i
+    i=m.sqrt((data.data)-10)
+    rospy.loginfo(". Decrypted num %i",i)
+    pubb.publish(data.data)
+    rospy.loginfo("Data Recieved correctlly")
+    time.sleep(3)
 
-decrypted_num = 0
-
-def Callback(data):
-    global decrypted_num, encrypted_num
-    encrypted_num = int(data.data)
-    decrypted_num = math.sqrt(encrypted_num - 10)
-    rospy.loginfo(". decrypted data %s", int(decrypted_num))
-
+if __name__ == '__main__': 
+    rospy.init_node("Synchronous_Subscriber", anonymous = True)
     
-
-def Subscriber():
-    global decrypted_num
-    
-    rospy.init_node(name='Synchronous_Subscriber', anonymous=True)
-    sub = rospy.Subscriber('encrypted_data', String, Callback)
-    
-    pub = rospy.Publisher('decrypted_data', String, queue_size=10)
-
-    pub.publish(str(int(decrypted_num)))
-    
+    pubb = rospy.Publisher('dycrypted_data', Float32, queue_size=10)
+    sub = rospy.Subscriber('encrypted_data', Int16, my_callback)
     rospy.spin()
-
-if __name__ == '__main__':
-    Subscriber()
