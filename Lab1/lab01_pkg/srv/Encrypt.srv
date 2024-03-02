@@ -1,0 +1,5 @@
+# Encrypt.srv
+string encrypted
+int32 key
+---
+string decrypted
