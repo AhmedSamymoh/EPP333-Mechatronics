@@ -1,13 +1,13 @@
 ## Mechatronics Course - EPP333
 #### Alexandria University,  Prof. Mohammed El Habrouk
-----__________________________________
+----
 ### Labs and Tasks Overview
 - **Lab 1:** ROS Introduction
-_____________________________________________________________________________________
+ ______________________________________
 - **Lab 2:** Kinematics Fundamentals
 - **Lab 3:** Forward Kinematics
 - **Lab 4:** Inverse Kinematics
-_____________________________________________________________________________________
+ ______________________________________
 - **Lab 5:** Computer Vision Basics
 - **Lab 6:** Traditional Vision Techniques
    - Sobel Filter
