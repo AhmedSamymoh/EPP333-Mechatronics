@@ -1,17 +1,21 @@
 ## Mechatronics Course - EPP333
 #### Alexandria University,  Prof. Mohammed El Habrouk
 ----
+
 ### Labs and Tasks Overview
-- **Lab 1:** ROS Introduction
-______________________________________
-- **Lab 2:** Kinematics Fundamentals
-- **Lab 3:** Forward Kinematics
-- **Lab 4:** Inverse Kinematics
-______________________________________
-- **Lab 5:** Computer Vision Basics
-- **Lab 6:** Traditional Vision Techniques
-   - Sobel Filter
-   - Canny Edge Detection
-   - Hough Transform
-- **Lab 7:** Keypoints Detection and Matching
-- **Lab 8:** Stereo Vision
+----
+- ROS Introduction
+   - **Lab 0:** Publisher and Subscriber
+   - **Lab 1:** Server and Client
+
+- Kinematics Fundamentals
+   - **Lab 2:** Forward Kinematics
+   - **Lab 3:** Inverse Kinematics
+
+- Computer Vision Basics
+   - **Lab 5:** Traditional Vision Techniques
+      - Sobel Filter
+      - Canny Edge Detection
+      - Hough Transform
+   - **Lab 6:** Keypoints Detection and Matching
+   - **Lab 7:** Stereo Vision
