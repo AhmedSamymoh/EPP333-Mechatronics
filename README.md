@@ -5,8 +5,8 @@
 ### Labs and Tasks Overview
 ----
 - ROS Introduction
-   - **Lab 0:** Publisher and Subscriber
-   - **Lab 1:** Server and Client
+   - **[Lab 0:](/Lab0)** Publisher and Subscriber
+   - **[Lab 1:](/Lab1)** Server and Client
 
 - Kinematics Fundamentals
    - **Lab 2:** Forward Kinematics
