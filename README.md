@@ -13,9 +13,9 @@
    - **Lab 3:** Inverse Kinematics
 
 - Computer Vision Basics
-   - **Lab 5:** Traditional Vision Techniques
+   - **Lab 4:** Traditional Vision Techniques
       - Sobel Filter
       - Canny Edge Detection
       - Hough Transform
-   - **Lab 6:** Keypoints Detection and Matching
-   - **Lab 7:** Stereo Vision
+   - **Lab 5:** Keypoints Detection and Matching
+   - **Lab 6:** Stereo Vision
