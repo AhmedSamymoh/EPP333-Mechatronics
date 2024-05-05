@@ -2,7 +2,7 @@
 
 ## 1. Introduction
 This document presents the design and implementation of a GUI-Based Serial Link Kinematics Solver developed for the EPP333-Mechatronics course. The solver provides a user-friendly interface for solving forward and inverse kinematics problems and visualizing robot workspace.
-![photo1](/Lab3 GUI Based Kinamatics Solver/Validate1.png)
+![photo1](/Lab3_GUI_Based_Kinematics_Solver/Validate1.png)
 
 ## 2. GUI Design
 The MATLAB App consists of:
