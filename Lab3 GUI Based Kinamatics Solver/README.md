@@ -19,6 +19,7 @@ The MATLAB App consists of:
 <div style="text-align: right; padding-right: 40px;">
   <img src="/Lab3 GUI Based Kinamatics Solver/Validate1.png" alt="Pin Diagram" width="600">
 </div>
+
 ## 3. Forward Kinematics Solver
 Forward kinematics determines the end effector's position and orientation based on the joint angles of a robot manipulator. The Denavit-Hartenberg (DH) parameters provided by the user are used for calculation.
 
