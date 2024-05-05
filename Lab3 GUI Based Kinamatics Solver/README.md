@@ -2,7 +2,7 @@
 
 ## 1. Introduction
 This document presents the design and implementation of a GUI-Based Serial Link Kinematics Solver developed for the EPP333-Mechatronics course. The solver provides a user-friendly interface for solving forward and inverse kinematics problems and visualizing robot workspace.
-![photo1](/Validate1.png)
+![photo1](/Lab3 GUI Based Kinamatics Solver/Validate1.png)
 
 ## 2. GUI Design
 The MATLAB App consists of:
@@ -13,7 +13,7 @@ The MATLAB App consists of:
 - Buttons for Kinematics Calculation
 - Display Fields for Calculated Results
 
-![photo2](/Validate2.png)
+![photo2](/Lab3 GUI Based Kinamatics Solver/Validate2.png)
 
 ## 3. Forward Kinematics Solver
 Forward kinematics determines the end effector's position and orientation based on the joint angles of a robot manipulator. The Denavit-Hartenberg (DH) parameters provided by the user are used for calculation.
